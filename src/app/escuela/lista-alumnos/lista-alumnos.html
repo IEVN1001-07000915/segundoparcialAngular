@@ -1,11 +1,237 @@
+<div class="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow">
+ 
+  <h1 class="text-3xl font-bold text-gray-900 mb-6">
+    Contact form
+  </h1>
+ 
+  <form [formGroup]="formulario">
+ 
+    <!-- Matricula -->
+    <div class="mb-5">
+ 
+      <label
+        for="Matricula"
+        class="block mb-2 text-sm font-medium text-gray-900"
+      >
+        Matricula
+      </label>
+ 
+      <input
+        type="text"
+        id="matricula"
+        name="matricula"
+        formControlName="matricula"
+        required
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+               focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        placeholder="Matricula"
+      >
+ 
+      <!-- Error required -->
+      <div
+        *ngIf="
+          contactForm.get('name')?.touched &&
+          contactForm.get('name')?.errors?.['required']
+        "
+        class="p-4 mt-2 text-sm text-red-800 rounded-lg bg-red-50"
+        role="alert"
+      >
+        This field is required.
+      </div>
+ 
+      <!-- Error minlength -->
+      <div
+        *ngIf="
+          contactForm.get('name')?.touched &&
+          contactForm.get('name')?.errors?.['minlength']
+        "
+        class="p-4 mt-2 text-sm text-red-800 rounded-lg bg-red-50"
+        role="alert"
+      >
+        Name must be longer than
+        {{
+          contactForm.get('name')?.errors?.['minlength']?.requiredLength
+        }}
+        characters.
+      </div>
+ 
+    </div>
+ 
+    <!-- Nombre -->
+    <div class="mb-5">
+ 
+      <label
+        for="nombre"
+        class="block mb-2 text-sm font-medium text-gray-900"
+      >
+        Nombre
+      </label>
+ 
+      <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        formControlName="nombre"
+        required
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+               focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        placeholder="Nombre"
+      >
+ 
+      <!-- Error required -->
+      <div
+        *ngIf="
+          contactForm.get('name')?.touched &&
+          contactForm.get('name')?.errors?.['required']
+        "
+        class="p-4 mt-2 text-sm text-red-800 rounded-lg bg-red-50"
+        role="alert"
+      >
+        This field is required.
+      </div>
+ 
+      <!-- Error minlength -->
+      <div
+        *ngIf="
+          contactForm.get('name')?.touched &&
+          contactForm.get('name')?.errors?.['minlength']
+        "
+        class="p-4 mt-2 text-sm text-red-800 rounded-lg bg-red-50"
+        role="alert"
+      >
+        Name must be longer than
+        {{
+          contactForm.get('name')?.errors?.['minlength']?.requiredLength
+        }}
+        characters.
+      </div>
+ 
+    </div>
 
-<br>
-<br>
-<br>
 
-<form class="max-w-sm mx-auto space-y-4">
-  <input type="text" id="disabled-input" aria-label="disabled input" class="bg-neutral-secondary-medium border border-default-medium text-fg-disabled text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" value="Disabled input" disabled>
-  <input type="text" id="disabled-input-2" aria-label="disabled input 2" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" value="Disabled readonly input" disabled readonly>
-</form>
+    <!-- Correo -->
+    <div class="mb-5">
+ 
+      <label
+        for="Correo"
+        class="block mb-2 text-sm font-medium text-gray-900"
+      >
+        Correo
+      </label>
+ 
+      <input
+        type="text"
+        id="correo"
+        name="correo"
+        formControlName="correo"
+        required
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+               focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        placeholder="Correo"
+      >
+ 
+      <!-- Error required -->
+      <div
+        *ngIf="
+          contactForm.get('name')?.touched &&
+          contactForm.get('name')?.errors?.['required']
+        "
+        class="p-4 mt-2 text-sm text-red-800 rounded-lg bg-red-50"
+        role="alert"
+      >
+        This field is required.
+      </div>
+ 
+      <!-- Error minlength -->
+      <div
+        *ngIf="
+          contactForm.get('name')?.touched &&
+          contactForm.get('name')?.errors?.['minlength']
+        "
+        class="p-4 mt-2 text-sm text-red-800 rounded-lg bg-red-50"
+        role="alert"
+      >
+        Name must be longer than
+        {{
+          contactForm.get('name')?.errors?.['minlength']?.requiredLength
+        }}
+        characters.
+      </div>
+ 
+    </div>
 
 
+    <!-- Materia -->
+    <div class="mb-5">
+ 
+      <label
+        for="Materia"
+        class="block mb-2 text-sm font-medium text-gray-900"
+      >
+        Materia
+      </label>
+ 
+      <input
+        type="text"
+        id="materia"
+        name="materia"
+        formControlName="materia"
+        required
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+               focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        placeholder="Materia"
+      >
+ 
+      <!-- Error required -->
+      <div
+        *ngIf="
+          contactForm.get('name')?.touched &&
+          contactForm.get('name')?.errors?.['required']
+        "
+        class="p-4 mt-2 text-sm text-red-800 rounded-lg bg-red-50"
+        role="alert"
+      >
+        This field is required.
+      </div>
+ 
+      <!-- Error minlength -->
+      <div
+        *ngIf="
+          contactForm.get('name')?.touched &&
+          contactForm.get('name')?.errors?.['minlength']
+        "
+        class="p-4 mt-2 text-sm text-red-800 rounded-lg bg-red-50"
+        role="alert"
+      >
+        Name must be longer than
+        {{
+          contactForm.get('name')?.errors?.['minlength']?.requiredLength
+        }}
+        characters.
+      </div>
+ 
+    </div>
+
+ <!-- Botón -->
+      <div class="flex justify-center mt-5">
+ 
+        <button
+          type="submit"
+         (click)="muestraAlumnos()"
+          class="text-white bg-blue-700 hover:bg-blue-800
+                 focus:ring-4 focus:outline-none focus:ring-blue-300
+                 font-medium rounded-lg text-sm px-5 py-2.5
+                 disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          Registrar
+        </button>
+ 
+      </div>
+  </form>
+
+  <h3>Matricula{{alumno.matricula}}</h3>
+  <h3>Nombre{{alumno.nombre}}</h3>
+  <h3>correo{{alumno.correo}}</h3>
+  <h3>materia{{alumno.materia}}</h3>
+ 
+</div>
