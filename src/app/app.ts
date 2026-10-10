@@ -3,8 +3,8 @@ import { RouterOutlet } from '@angular/router';
 import { OnInit } from '@angular/core';
 import { initFlowbite } from 'flowbite';
 import { Navbar } from './navbar/navbar';
-/*import { Usuarios } from './formularios/usuarios/usuarios';
-import { Zodiaco } from './formularios/zodiaco/zodiaco';*/
+import { Usuarios } from './formularios/usuarios/usuarios';
+import { Zodiaco } from './formularios/zodiaco/zodiaco';
  
 @Component({
   imports: [RouterOutlet, Navbar],
